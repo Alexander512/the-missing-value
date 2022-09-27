@@ -20,10 +20,11 @@ function maximum(...values) {
 
 /* function for calculating the mean value */
 function mean(...values) {
+  let nValues = values.length;
   let sum = values.reduce((previousValue, currentValue) => {
     return previousValue + currentValue;
   }, 0);
-  return sum / values.length;
+  return sum / nValues;
 }
 
 /* statistics object */
