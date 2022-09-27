@@ -26,6 +26,7 @@ function mean(...values) {
   return sum / values.length;
 }
 
+/* statistics object */
 module.exports = {
   minimum,
   maximum,
