@@ -1,4 +1,4 @@
-/* descriptive statistics object */
+/* the-missing-value */
 
 /* function for calculating the minimum value */
 function minimum(...values) {
@@ -27,9 +27,17 @@ function mean(...values) {
   return sum / nValues;
 }
 
-/* statistics object */
+/* function for calculating the sum */
+function sum(...values) {
+  let sum = values.reduce((previousValue, currentValue) => {
+    return previousValue + currentValue;
+  }, 0);
+  return sum;
+}
+
 module.exports = {
   minimum,
   maximum,
-  mean
+  mean,
+  sum
 };

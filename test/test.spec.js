@@ -1,5 +1,5 @@
 const { expect } = require('chai');
-const { minimum, maximum, mean, sum } = require('../source/descriptive');
+const { minimum, maximum, mean, sum } = require('../source/the-missing-value');
 
 describe('Descriptive statistics function', () => {
 
