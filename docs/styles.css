@@ -1,13 +1,13 @@
 /* the-missing-value */
 
 a {
-  color: #6666FF;
+  color: blue;
   font-weight: bold;
   text-decoration: none;
 }
 
 a:visited {
-  color: #6666FF;
+  color: blue;
 }
 
 body {
@@ -20,14 +20,27 @@ body {
 }
 
 h1 {
-  margin: 1vh 1.5vw 3vh 1.5vw;
+  margin: 1vh 1vw 3vh 1vw;
+}
+
+#flexContainerAbout > h1 {
+  font-size: 300%;
+}
+
+#documentation > h1 {
+  background-color: black;
+  border-radius: 1px;
+  margin: 1vh 0.1vw 1vh 0.1vw;
+  padding: 1.5vh 1.5vw 1.5vh 1.5vw;
 }
 
 h2 {
+  font-size: 125%;
   margin: 1vh 0 1vh 0;
 }
 
 #documentation h3 {
+  font-size: 100%;
   margin: 0 1.5vw 0 1.5vw;
 }
 
@@ -52,8 +65,8 @@ img {
 }
 
 #documentation {
-  block-size: 100vh;
-  padding: 0 3vw 0 3vw;
+  background-color: #CCCCCC;
+  padding: 0.5vh 1vw 0.5vh 1vw;
 }
 
 #flexContainerAbout {
@@ -75,7 +88,10 @@ img {
 }
 
 .function {
-  margin: 4.5vh 3vw 4.5vh 3vw;
+  background-color: black;
+  border-radius: 1px;
+  margin: 1vh 0.1vw 1vh 0.1vw;
+  padding: 1.5vh 1.5vw 1.5vh 1.5vw;
 }
 
 @media (max-width: 600px) {
