@@ -9,9 +9,12 @@ describe('Descriptive statistics function', () => {
   });
 
   describe('minimum function', () => {
+    it('is a function', () => {
+      expect(minimum).to.be.a('function');
+    });
     it('returns a value of type number', () => {
       let result = minimum(...values);
-      expect(typeof result).to.equal('number');
+      expect(result).to.be.a('number');
     });
     it('returns the value zero', () => {
       let result = minimum(...values);
@@ -20,9 +23,12 @@ describe('Descriptive statistics function', () => {
   });
 
   describe('maximum function', () => {
+    it('is a function', () => {
+      expect(maximum).to.be.a('function');
+    });
     it('returns a value of type number', () => {
       let result = maximum(...values);
-      expect(typeof result).to.equal('number');
+      expect(result).to.be.a('number');
     });
     it('returns the value ten', () => {
       let result = maximum(...values);
@@ -31,9 +37,12 @@ describe('Descriptive statistics function', () => {
   });
 
   describe('mean function', () => {
+    it('is a function', () => {
+      expect(mean).to.be.a('function');
+    });
     it('returns a value of type number', () => {
       let result = mean(...values);
-      expect(typeof result).to.equal('number');
+      expect(result).to.be.a('number');
     });
     it('returns the value five', () => {
       let result = mean(...values);
@@ -42,9 +51,12 @@ describe('Descriptive statistics function', () => {
   });
 
   describe('sum function', () => {
+    it('is a function', () => {
+      expect(sum).to.be.a('function');
+    });
     it('returns a value of type number', () => {
       let result = sum(...values);
-      expect(typeof result).to.equal('number');
+      expect(result).to.be.a('number');
     });
     it('returns the value fifty-five', () => {
       let result = sum(...values);
