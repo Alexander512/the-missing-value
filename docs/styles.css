@@ -20,51 +20,12 @@ body {
 }
 
 h1 {
-  margin: 1vh 1vw 3vh 1vw;
+  margin: 1.5vh 1.5vw 3vh 1.5vw;
 }
 
 #flexContainerAbout > h1 {
   font-size: 300%;
-}
-
-#documentation > h1 {
-  margin: 1vh 0.1vw 1vh 0.1vw;
-  padding: 1.5vh 1.5vw 1.5vh 1.5vw;
-}
-
-h2 {
-  font-size: 125%;
-  margin: 1vh 0 1vh 0;
-}
-
-#documentation h3 {
-  font-size: 100%;
-  font-weight: normal;
-  margin: 0 1.5vw 0 1.5vw;
-}
-
-hr {
-  background-color: #CCCCCC;
-  inline-size: 91vw;
-}
-
-img {
-  block-size: auto;
-  inline-size: 30%;
-  max-inline-size: 100%;
-}
-
-#documentation p {
-  margin: 1vh 4.5vw 1vh 4.5vw;
-}
-
-#flexContainerAbout > p {
-  margin: 1vh 3vw 1vh 3vw;
-  text-align: center;
-}
-
-#documentation {
-  padding: 0.5vh 1vw 0.5vh 1vw;
+  margin: 0 0 0 0;
 }
 
 #flexContainerAbout {
@@ -86,12 +47,17 @@ img {
 }
 
 .function {
-  margin: 3vh 0.1vw 1vh 0.1vw;
-  padding: 1.5vh 1.5vw 1.5vh 1.5vw;
+  margin: 5vh 1.5vw 0 1.5vw; 
 }
 
-@media (max-width: 600px) {
-  img {
-    inline-size: 50%;
-  }
+.function > h2 {
+  margin: 0 3.0vw 0 3.0vw;
+}
+
+.function > h3 {
+  margin: 1vh 4.5vw 1vh 4.5vw;
+}
+
+.function > p {
+  margin: 1vh 6.0vw 1vh 6.0vw;
 }
