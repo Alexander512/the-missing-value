@@ -3,9 +3,11 @@ const { minimum, maximum, mean, sum } = require('../source/the-missing-value');
 
 describe('Descriptive statistics function', () => {
 
-  let values;
+  let values1;
+  let values2;
   beforeEach(() => {
-    values = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+    values1 = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+    values2 = [ -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5 ];
   });
 
   describe('minimum function', () => {
@@ -13,12 +15,16 @@ describe('Descriptive statistics function', () => {
       expect(minimum).to.be.a('function');
     });
     it('returns a value of type number', () => {
-      let result = minimum(...values);
+      let result = minimum(...values1);
       expect(result).to.be.a('number');
     });
     it('returns the value zero', () => {
-      let result = minimum(...values);
+      let result = minimum(...values1);
       expect(result).to.equal(0);
+    });
+    it('returns the value negative five', () => {
+      let result = minimum(...values2);
+      expect(result).to.equal(-5);
     });
   });
 
@@ -27,12 +33,16 @@ describe('Descriptive statistics function', () => {
       expect(maximum).to.be.a('function');
     });
     it('returns a value of type number', () => {
-      let result = maximum(...values);
+      let result = maximum(...values1);
       expect(result).to.be.a('number');
     });
     it('returns the value ten', () => {
-      let result = maximum(...values);
+      let result = maximum(...values1);
       expect(result).to.equal(10);
+    });
+    it('returns the value five', () => {
+      let result = maximum(...values2);
+      expect(result).to.equal(5);
     });
   });
 
@@ -41,12 +51,16 @@ describe('Descriptive statistics function', () => {
       expect(mean).to.be.a('function');
     });
     it('returns a value of type number', () => {
-      let result = mean(...values);
+      let result = mean(...values1);
       expect(result).to.be.a('number');
     });
     it('returns the value five', () => {
-      let result = mean(...values);
+      let result = mean(...values1);
       expect(result).to.equal(5);
+    });
+    it('returns the value zero', () => {
+      let result = mean(...values2);
+      expect(result).to.equal(0);
     });
   });
 
@@ -55,12 +69,16 @@ describe('Descriptive statistics function', () => {
       expect(sum).to.be.a('function');
     });
     it('returns a value of type number', () => {
-      let result = sum(...values);
+      let result = sum(...values1);
       expect(result).to.be.a('number');
     });
     it('returns the value fifty-five', () => {
-      let result = sum(...values);
+      let result = sum(...values1);
       expect(result).to.equal(55);
+    });
+    it('returns the values zero', () => {
+      let result = sum(...values2);
+      expect(result).to.equal(0);
     });
   });
 
