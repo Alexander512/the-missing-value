@@ -1,5 +1,10 @@
 /* the-missing-value */
 
+/* function for counting the number of values */
+function count(...values) {
+  return values.length;
+}
+
 /* function for calculating the minimum value */
 function minimum(...values) {
   let minimum = values.reduce((previousValue, currentValue) => {
@@ -36,6 +41,7 @@ function sum(...values) {
 }
 
 module.exports = {
+  count,
   minimum,
   maximum,
   mean,
