@@ -23,6 +23,10 @@ h1 {
   margin: 1.5vh 1.5vw 3vh 1.5vw;
 }
 
+ul {
+  list-style-type: none;
+}
+
 #flexContainerAbout > h1 {
   font-size: 300%;
   margin: 0 0 0 0;
@@ -52,10 +56,6 @@ h1 {
 
 .function > h2 {
   margin: 0 3.0vw 0 3.0vw;
-}
-
-.function > h3 {
-  margin: 1vh 4.5vw 1vh 4.5vw;
 }
 
 .function > p {
