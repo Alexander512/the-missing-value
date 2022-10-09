@@ -23,8 +23,13 @@ h1 {
   margin: 1.5vh 1.5vw 3vh 1.5vw;
 }
 
+hr {
+  border-color: #4D73FF;
+}
+
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 #flexContainerAbout > h1 {
@@ -40,24 +45,44 @@ ul {
   justify-content: center;
 }
 
+#flexContainerFunctions {
+  display: flex;
+}
+
 #flexContainerNav {
   align-items: center;
   display: flex;
   min-block-size: 50px;
 }
 
+#flexItemSidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+#flexItemFunctions {
+  inline-size: 90vw;
+}
+
+#sidebar {
+  inline-size: 12.5vw;
+  margin: 0 1.5vw 0 1.5vw;
+  min-inline-size: 100px;
+}
+
 .flexItemNav {
   margin: 0 1.5vw 0 1.5vw;
 }
 
-.function {
-  margin: 5vh 1.5vw 0 1.5vw; 
+#flexItemFunctions > h2 {
+  font-size: 200%;
+  margin: 1.5vh 1.5vw 3vh 1.5vw;
 }
 
-.function > h2 {
-  margin: 0 3.0vw 0 3.0vw;
+#flexItemFunctions > h3 {
+  margin: 0 5vw 0 5vw;
 }
 
-.function > p {
-  margin: 1vh 6.0vw 1vh 6.0vw;
+#flexItemFunctions > p {
+  margin: 1vh 10vw 1vh 10vw;
 }
