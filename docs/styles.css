@@ -1,18 +1,18 @@
 /* the-missing-value */
 
 a {
-  color: #39FF14;
+  color: #4D73FF;
   font-weight: bold;
   text-decoration: none;
 }
 
 a:visited {
-  color: #39FF14;
+  color: #4D73FF;
 }
 
 body {
   background-color: black;
-  color: #39FF14;
+  color: #4D73FF;
   font-family: Geneva;
   font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
   margin: 0;
