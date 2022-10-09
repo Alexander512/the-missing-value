@@ -13,12 +13,12 @@ Simply clone the repo or download a copy of the-missing-value.js from the source
 
 Require the library 
 
-  const statistics = require('the-missing-value.js');  // the pathname may differ
+const statistics = require('the-missing-value.js');
   
-or destructure the necessary functions
+or
 
-  const { minimum, maximum } = require('the-missing-value.js'); // the pathname may differ
+const { minimum, maximum } = require('the-missing-value.js');
   
 ## License
 
-MIT licence (mit)
+MIT license
