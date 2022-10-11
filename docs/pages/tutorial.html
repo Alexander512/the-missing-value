@@ -17,9 +17,63 @@
 
     <main>
 
-      <div id='flexContainerTutorial'>
+      <div id='tutorial'>
 
         <h1>Tutorial</h1>
+
+        <p>
+          Destructure the necessary functions from the library.
+        </p>
+
+        <p>
+          <code>
+            &gt; const { mean } = require('the-missing-value.js');
+          </code>
+        </p>
+
+        <p>
+          The functions can accept multiple arguments due to the rest parameters. 
+          As an example, you can pass a number of integers to the mean function.
+        </p>
+
+        <p>
+          <code>
+            &gt; mean(1, 2, 3, 4, 5); // returns 3
+          </code>
+        </p>
+
+        <p>
+          Additionally, with the use of the spread operator the functions can work
+          with the values from one or more arrays.
+        </p>
+
+        <p>
+          <code>
+            &gt; const array1 = [ 1, 2, 3, 4, 5 ];
+          </code>
+        </p>
+
+        <p>
+          <code>
+            &gt; const array2 = [ 6, 7, 8, 9, 10 ];
+          </code>
+        </p>
+
+        <p>
+          <code>
+            &gt; mean(...array1); // returns 3
+          </code>
+        </p>
+
+        <p>
+          and
+        </p>
+
+        <p>
+          <code>
+            &gt; mean(...array1, ...array2); // returns 5.5
+          </code>
+        </p>
 
       </div>
 
