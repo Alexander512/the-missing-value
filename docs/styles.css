@@ -32,17 +32,17 @@ ul {
   padding: 0;
 }
 
-#flexContainerAbout > h1 {
-  font-size: 300%;
-  margin: 0 0 0 0;
-}
-
 #flexContainerAbout {
   align-items: center;
   block-size: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#flexContainerAbout > h1 {
+  font-size: 300%;
+  margin: 0 0 0 0;
 }
 
 #flexContainerFunctions {
@@ -64,16 +64,6 @@ ul {
   inline-size: 90vw;
 }
 
-#sidebar {
-  inline-size: 12.5vw;
-  margin: 0 1.5vw 0 1.5vw;
-  min-inline-size: 100px;
-}
-
-.flexItemNav {
-  margin: 0 1.5vw 0 1.5vw;
-}
-
 #flexItemFunctions > h2 {
   font-size: 200%;
   margin: 1.5vh 1.5vw 3vh 1.5vw;
@@ -85,4 +75,27 @@ ul {
 
 #flexItemFunctions > p {
   margin: 1vh 10vw 1vh 10vw;
+}
+
+#sidebar {
+  inline-size: 12.5vw;
+  margin: 0 1.5vw 0 1.5vw;
+  min-inline-size: 100px;
+}
+
+#tutorial {
+  margin: 0 1.5vw 0 1.5vw;
+  max-inline-size: 70ch; 
+}
+
+#tutorial > h1 {
+  margin: 1.5vh 1.5vw 3vh 0;
+}
+
+#tutorial > p {
+  margin: 3vh 0 3vh 0;
+}
+
+.flexItemNav {
+  margin: 0 1.5vw 0 1.5vw;
 }
