@@ -103,7 +103,7 @@ ul {
 
 @media (max-width: 600px) {
   #flexContainerAbout {
-    block-size: 90vh;
+    overflow: clip;
   }
 }
 
