@@ -39,16 +39,11 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-block-size: 100%;
 }
 
 #flexContainerAbout > h1 {
   font-size: 300%;
   margin: 0 0 0 0;
-}
-
-#flexContainerAbout > p {
-  margin: 2.5vh 1.5vw 0 1.5vw;
 }
 
 #flexContainerFunctions {
@@ -105,3 +100,10 @@ ul {
 .flexItemNav {
   margin: 0 1.5vw 0 1.5vw;
 }
+
+@media (max-width: 600px) {
+  #flexContainerAbout {
+    block-size: 90vh;
+  }
+}
+
