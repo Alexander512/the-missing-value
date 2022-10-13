@@ -18,7 +18,6 @@ body {
   font-size: clamp(0.75rem, 0.5rem + 1vw, 1.25rem);
   margin: 0;
   padding: 0;
-  position: fixed;
 }
 
 h1 {
@@ -27,10 +26,6 @@ h1 {
 
 hr {
   border-color: #4D73FF;
-}
-
-html {
-  position: fixed;
 }
 
 ul {
@@ -45,6 +40,7 @@ ul {
   flex-direction: column;
   inline-size: 100vw;
   justify-content: center;
+  position: fixed;
 }
 
 #flexContainerAbout > h1 {
