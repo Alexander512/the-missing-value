@@ -1,5 +1,12 @@
 const { expect } = require('chai');
-const { count, minimum, maximum, mean, sum } = require('../source/the-missing-value');
+const { 
+  count, 
+  minimum, 
+  maximum, 
+  mean, 
+  sum, 
+  stdev 
+} = require('../source/the-missing-value');
 
 describe('Descriptive statistics function', () => {
 
@@ -93,6 +100,24 @@ describe('Descriptive statistics function', () => {
     it('returns the values zero', () => {
       let result = sum(...values2);
       expect(result).to.equal(0);
+    });
+  });
+
+  describe('stdev function', () => {
+    it('is a function', () => {
+      expect(stdev).to.be.a('function');
+    });
+    it('returns a value of type number', () => {
+      let result = stdev(...values1);
+      expect(result).to.be.a('number');
+    });
+    it('returns the value 3.316625', () => {
+      let result = stdev(...values1).toPrecision(7);
+      expect(result).to.equal(3.316625);
+    });
+    it('returns the value 3.316625', () => {
+      let result = stdev(...values2).toPrecision(7);
+      expect(result).to.equal(3.316625);
     });
   });
 
