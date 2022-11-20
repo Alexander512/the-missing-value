@@ -26,6 +26,7 @@ h1 {
 
 hr {
   border-color: #4D73FF;
+  inline-size: 97vw;
 }
 
 ul {
@@ -48,42 +49,22 @@ ul {
   margin: 0 0 0 0;
 }
 
-#flexContainerFunctions {
-  display: flex;
-}
-
 #flexContainerNav {
   align-items: center;
   display: flex;
   min-block-size: 50px;
 }
 
-#flexItemSidebar {
-  display: flex;
-  flex-direction: column;
-}
-
-#flexItemFunctions {
-  inline-size: 90vw;
-}
-
-#flexItemFunctions > h2 {
-  font-size: 200%;
+#containerFunctions > h2 {
   margin: 1.5vh 1.5vw 3vh 5vw;
 }
 
-#flexItemFunctions > h3 {
+#containerFunctions > h3 {
   margin: 0 1.5vw 0 7.5vw;
 }
 
-#flexItemFunctions > p {
+#containerFunctions > p {
   margin: 1vh 10vw 1vh 10vw;
-}
-
-#sidebar {
-  inline-size: 12.5vw;
-  margin: 0 1.5vw 0 1.5vw;
-  min-inline-size: 100px;
 }
 
 #tutorial {
