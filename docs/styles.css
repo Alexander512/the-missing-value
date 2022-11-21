@@ -34,25 +34,14 @@ ul {
   padding: 0;
 }
 
-#flexContainerAbout {
-  align-items: center;
-  block-size: calc(100vh - 50px);
-  display: flex;
-  flex-direction: column;
-  inline-size: 100vw;
-  justify-content: center;
-  position: fixed;
-}
-
-#flexContainerAbout > h1 {
+#containerAbout > h1 {
   font-size: 300%;
-  margin: 0 0 0 0;
+  margin: 35vh 0 0 0;
+  text-align: center;
 }
 
-#flexContainerNav {
-  align-items: center;
-  display: flex;
-  min-block-size: 50px;
+#containerAbout > p {
+  text-align: center;
 }
 
 #containerFunctions > h2 {
@@ -65,6 +54,12 @@ ul {
 
 #containerFunctions > p {
   margin: 1vh 10vw 1vh 10vw;
+}
+
+#flexContainerNav {
+  align-items: center;
+  display: flex;
+  min-block-size: 50px;
 }
 
 #tutorial {
