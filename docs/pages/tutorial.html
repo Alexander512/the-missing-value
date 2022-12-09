@@ -32,46 +32,58 @@
         </p>
 
         <p>
-          The functions can accept multiple arguments. As an example, 
-          you can pass a number of integers to the mean function.
+          The functions accept an array of values as the first argument
+          with a second optional argument rmNull with a default value of false.
         </p>
 
         <p>
           <code>
-            &gt; mean(1, 2, 3, 4, 5); // returns 3
+            mean(values, rmNull = false)
           </code>
         </p>
 
         <p>
-          Additionally, with the use of the spread operator the functions can work
-          with the values from one or more arrays.
+          When the rmNull argument is false, the function will return null if the array of 
+          values passed in as the first argument contains a null value. By setting 
+          rmNull to true, null values are removed from the array and the calculated 
+          value is returned.
+        </p>
+
+        <p>
+          Using the following array as an example:
         </p>
 
         <p>
           <code>
-            &gt; const array1 = [ 1, 2, 3, 4, 5 ];
+            &gt; const integerArray = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
           </code>
         </p>
 
         <p>
           <code>
-            &gt; const array2 = [ 6, 7, 8, 9, 10 ];
+            &gt; mean(integerArray); // returns 4.5
+          </code>
+        </p>
+
+        <p>
+          If a missing value is included in the array:
+        </p>
+
+        <p>
+          <code>
+            &gt; const integerMissing = [ 0, 1, 2, 3, 4, 5, null, 7, 8, 9 ];
           </code>
         </p>
 
         <p>
           <code>
-            &gt; mean(...array1); // returns 3
+            &gt; mean(integerMissing); // returns null
           </code>
         </p>
 
         <p>
-          and
-        </p>
-
-        <p>
           <code>
-            &gt; mean(...array1, ...array2); // returns 5.5
+            &gt; mean(integerMissing, rmNull = true); // returns 4.333...
           </code>
         </p>
 
