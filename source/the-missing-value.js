@@ -1,43 +1,70 @@
 /* the-missing-value */
 
 /* function for counting the number of values */
-function count(...values) {
-  return values.length;
+function count(values, rmNull = false) {
+  if (values.includes(null) && rmNull === false) {
+    return null;
+  } else {
+    const valuesF = values.filter(value => value !== null);
+    return valuesF.length;
+  }
 }
 
 /* function for calculating the minimum value */
-function minimum(...values) {
-  let minimum = values.reduce((previousValue, currentValue) => {
-    if (currentValue < previousValue) return currentValue;
-    return previousValue;
-  }, Infinity);
-  return minimum;
+function minimum(values, rmNull = false) {
+  if (values.includes(null) && rmNull === false) {
+    return null;
+  } else {
+    const minimum = values
+    .filter(value => value !== null)
+    .reduce((pValue, cValue) => { 
+      if (cValue < pValue) return cValue;
+      return pValue;
+    }, Infinity);
+    return minimum;
+  }
 }
 
 /* function for calculating the maximum value */
-function maximum(...values) {
-  let maximum = values.reduce((previousValue, currentValue) => {
-    if (currentValue > previousValue) return currentValue;
-    return previousValue;
-  }, -Infinity);
-  return maximum;
+function maximum(values, rmNull = false) {
+  if (values.includes(null) && rmNull === false) {
+    return null;
+  } else {
+    const maximum = values
+    .filter(value => value !== null)
+    .reduce((pValue, cValue) => {
+      if (cValue > pValue) return cValue;
+      return pValue;
+    }, -Infinity);
+    return maximum;
+  }
 }
 
 /* function for calculating the mean value */
-function mean(...values) {
-  let nValues = values.length;
-  let sum = values.reduce((previousValue, currentValue) => {
-    return previousValue + currentValue;
-  }, 0);
-  return sum / nValues;
+function mean(values, rmNull = false) {
+  if (values.includes(null) && rmNull === false) {
+    return null;
+  } else {
+    const valuesF = values.filter(value => value !== null);
+    const sum = valuesF.reduce((pValue, cValue) => { 
+      return pValue + cValue; 
+    }, 0);
+    return sum / valuesF.length;
+  }
 }
 
 /* function for calculating the sum */
-function sum(...values) {
-  let sum = values.reduce((previousValue, currentValue) => {
-    return previousValue + currentValue;
-  }, 0);
-  return sum;
+function sum(values, rmNull = false) {
+  if (values.includes(null) && rmNull === false) {
+    return null;
+  } else {
+    const sum = values
+    .filter(value => value !== null)
+    .reduce((pValue, cValue) => {
+      return pValue + cValue;
+    }, 0);
+    return sum;
+  }
 }
 
 module.exports = {
