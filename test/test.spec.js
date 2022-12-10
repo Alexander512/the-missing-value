@@ -12,10 +12,12 @@ describe('Descriptive statistics functions', () => {
   let values1;
   let values2;
   let values3;
+  let values4;
   beforeEach(() => {
     values1 = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
     values2 = [ -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5 ];
     values3 = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, null, 10 ];
+    values4 = [ 1.01, 2.01, 3.01, 4.01, 5.01 ];
   });
 
   describe('count function', () => {
@@ -56,6 +58,10 @@ describe('Descriptive statistics functions', () => {
       let result = minimum(values2);
       expect(result).to.equal(-5);
     });
+    it('returns the value 1.01', () => {
+      let result = minimum(values4);
+      expect(result).to.equal(1.01);
+    });
     it('returns null with a missing value in the dataset', () => {
       let result = minimum(values3);
       expect(result).to.equal(null);
@@ -81,6 +87,10 @@ describe('Descriptive statistics functions', () => {
     it('returns the value 5', () => {
       let result = maximum(values2);
       expect(result).to.equal(5);
+    });
+    it('returns the value 5.01', () => {
+      let result = maximum(values4);
+      expect(result).to.equal(5.01);
     });
     it('returns null with a missing value in the dataset', () => {
       let result = maximum(values3);
@@ -108,6 +118,10 @@ describe('Descriptive statistics functions', () => {
       let result = mean(values2);
       expect(result).to.equal(0);
     });
+    it('returns the value 3.01', () => {
+      let result = mean(values4);
+      expect(result).to.be.closeTo(3.01, 0.1);
+    });
     it('returns null with a missing value in the dataset', () => {
       let result = mean(values3);
       expect(result).to.equal(null);
@@ -130,9 +144,13 @@ describe('Descriptive statistics functions', () => {
       let result = sum(values1);
       expect(result).to.equal(55);
     });
-    it('returns the values 0', () => {
+    it('returns the value 0', () => {
       let result = sum(values2);
       expect(result).to.equal(0);
+    });
+    it('returns the value 15.05', () => {
+      let result = sum(values4);
+      expect(result).to.be.closeTo(15.05, 0.1);
     });
     it('returns null with a missing value in the dataset', () => {
       let result = sum(values3);
