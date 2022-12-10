@@ -55,13 +55,13 @@
 
         <p>
           <code>
-            &gt; const integerArray = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+            &gt; const integerArray = [ 1, 2, 3, 4, 5 ];
           </code>
         </p>
 
         <p>
           <code>
-            &gt; mean(integerArray); // returns 4.5
+            &gt; mean(integerArray); // returns 3 
           </code>
         </p>
 
@@ -71,7 +71,7 @@
 
         <p>
           <code>
-            &gt; const integerMissing = [ 0, 1, 2, 3, 4, 5, null, 7, 8, 9 ];
+            &gt; const integerMissing = [ 1, 2, null, 4, 5 ];
           </code>
         </p>
 
@@ -83,7 +83,7 @@
 
         <p>
           <code>
-            &gt; mean(integerMissing, rmNull = true); // returns 4.333...
+            &gt; mean(integerMissing, rmNull = true); // returns 3 
           </code>
         </p>
 
