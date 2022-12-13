@@ -32,9 +32,9 @@ describe('Descriptive statistics functions', () => {
       let result = count(values1);
       expect(result).to.equal(11);
     });
-    it('returns null with a missing value in the dataset', () => {
+    it('returns NaN with a missing value in the dataset', () => {
       let result = count(values3);
-      expect(result).to.equal(null);
+      expect(result).to.be.NaN;
     });
     it('returns 10 with null values removed', () => {
       let result = count(values3, rmNull = true);
@@ -62,9 +62,9 @@ describe('Descriptive statistics functions', () => {
       let result = minimum(values4);
       expect(result).to.equal(1.01);
     });
-    it('returns null with a missing value in the dataset', () => {
+    it('returns NaN with a missing value in the dataset', () => {
       let result = minimum(values3);
-      expect(result).to.equal(null);
+      expect(result).to.be.NaN;
     });
     it('returns 0 with null values removed', () => {
       let result = minimum(values3, rmNull = true);
@@ -92,9 +92,9 @@ describe('Descriptive statistics functions', () => {
       let result = maximum(values4);
       expect(result).to.equal(5.01);
     });
-    it('returns null with a missing value in the dataset', () => {
+    it('returns NaN with a missing value in the dataset', () => {
       let result = maximum(values3);
-      expect(result).to.equal(null);
+      expect(result).to.be.NaN;
     });
     it('returns 10 with null values removed', () => {
       let result = maximum(values3, rmNull = true);
@@ -122,9 +122,9 @@ describe('Descriptive statistics functions', () => {
       let result = mean(values4);
       expect(result).to.be.closeTo(3.01, 0.1);
     });
-    it('returns null with a missing value in the dataset', () => {
+    it('returns NaN with a missing value in the dataset', () => {
       let result = mean(values3);
-      expect(result).to.equal(null);
+      expect(result).to.be.NaN;
     });
     it('returns 4.6 with null values removed', () => {
       let result = mean(values3, rmNull = true);
@@ -152,9 +152,9 @@ describe('Descriptive statistics functions', () => {
       let result = sum(values4);
       expect(result).to.be.closeTo(15.05, 0.1);
     });
-    it('returns null with a missing value in the dataset', () => {
+    it('returns NaN with a missing value in the dataset', () => {
       let result = sum(values3);
-      expect(result).to.equal(null);
+      expect(result).to.be.NaN;
     });
     it('returns 46 with null values removed', () => {
       let result = sum(values3, rmNull = true);
