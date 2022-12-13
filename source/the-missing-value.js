@@ -3,7 +3,7 @@
 /* function for counting the number of values */
 function count(values, rmNull = false) {
   if (values.includes(null) && rmNull === false) {
-    return null;
+    return NaN;
   } else {
     const valuesF = values.filter(value => value !== null);
     return valuesF.length;
@@ -13,7 +13,7 @@ function count(values, rmNull = false) {
 /* function for calculating the minimum value */
 function minimum(values, rmNull = false) {
   if (values.includes(null) && rmNull === false) {
-    return null;
+    return NaN;
   } else {
     const minimum = values
     .filter(value => value !== null)
@@ -28,7 +28,7 @@ function minimum(values, rmNull = false) {
 /* function for calculating the maximum value */
 function maximum(values, rmNull = false) {
   if (values.includes(null) && rmNull === false) {
-    return null;
+    return NaN;
   } else {
     const maximum = values
     .filter(value => value !== null)
@@ -43,7 +43,7 @@ function maximum(values, rmNull = false) {
 /* function for calculating the mean value */
 function mean(values, rmNull = false) {
   if (values.includes(null) && rmNull === false) {
-    return null;
+    return NaN;
   } else {
     const valuesF = values.filter(value => value !== null);
     const sum = valuesF.reduce((pValue, cValue) => { 
@@ -56,7 +56,7 @@ function mean(values, rmNull = false) {
 /* function for calculating the sum */
 function sum(values, rmNull = false) {
   if (values.includes(null) && rmNull === false) {
-    return null;
+    return NaN;
   } else {
     const sum = values
     .filter(value => value !== null)
