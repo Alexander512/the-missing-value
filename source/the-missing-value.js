@@ -2,6 +2,7 @@
 
 /* function for counting the number of values */
 function count(values, rmNull = false) {
+  if (values.length === 0) throw new Error('empty dataset');
   if (values.includes(null) && rmNull === false) {
     return NaN;
   } else {
@@ -12,6 +13,7 @@ function count(values, rmNull = false) {
 
 /* function for calculating the minimum value */
 function minimum(values, rmNull = false) {
+  if (values.length === 0) throw new Error('empty dataset');
   if (values.includes(null) && rmNull === false) {
     return NaN;
   } else {
@@ -27,6 +29,7 @@ function minimum(values, rmNull = false) {
 
 /* function for calculating the maximum value */
 function maximum(values, rmNull = false) {
+  if (values.length === 0) throw new Error('empty dataset');
   if (values.includes(null) && rmNull === false) {
     return NaN;
   } else {
@@ -42,6 +45,7 @@ function maximum(values, rmNull = false) {
 
 /* function for calculating the mean value */
 function mean(values, rmNull = false) {
+  if (values.length === 0) throw new Error('empty dataset');
   if (values.includes(null) && rmNull === false) {
     return NaN;
   } else {
@@ -55,6 +59,7 @@ function mean(values, rmNull = false) {
 
 /* function for calculating the sum */
 function sum(values, rmNull = false) {
+  if (values.length === 0) throw new Error('empty dataset');
   if (values.includes(null) && rmNull === false) {
     return NaN;
   } else {
