@@ -24,6 +24,9 @@ describe('Descriptive statistics functions', () => {
     it('is a function', () => {
       expect(count).to.be.a('function');
     });
+    it('throws an error if the dataset contains no values', () => {
+      expect(count.bind(count, [])).to.throw(Error, 'empty dataset');
+    });
     it('returns a value of type number', () => {
       let result = count(values1);
       expect(result).to.be.a('number');
@@ -45,6 +48,9 @@ describe('Descriptive statistics functions', () => {
   describe('minimum function', () => {
     it('is a function', () => {
       expect(minimum).to.be.a('function');
+    });
+    it('throws an error if the dataset contains no values', () => {
+      expect(minimum.bind(minimum, [])).to.throw(Error, 'empty dataset');
     });
     it('returns a value of type number', () => {
       let result = minimum(values1);
@@ -76,6 +82,9 @@ describe('Descriptive statistics functions', () => {
     it('is a function', () => {
       expect(maximum).to.be.a('function');
     });
+    it('throws an error if the dataset contains no values', () => {
+      expect(maximum.bind(maximum, [])).to.throw(Error, 'empty dataset');
+    });
     it('returns a value of type number', () => {
       let result = maximum(values1);
       expect(result).to.be.a('number');
@@ -106,6 +115,9 @@ describe('Descriptive statistics functions', () => {
     it('is a function', () => {
       expect(mean).to.be.a('function');
     });
+    it('throws an error if the dataset contains no values', () => {
+      expect(mean.bind(mean, [])).to.throw(Error, 'empty dataset');
+    });
     it('returns a value of type number', () => {
       let result = mean(values1);
       expect(result).to.be.a('number');
@@ -135,6 +147,9 @@ describe('Descriptive statistics functions', () => {
   describe('sum function', () => {
     it('is a function', () => {
       expect(sum).to.be.a('function');
+    });
+    it('throws an error if the dataset contains no values', () => {
+      expect(sum.bind(sum, [])).to.throw(Error, 'empty dataset');
     });
     it('returns a value of type number', () => {
       let result = sum(values1);
