@@ -72,10 +72,27 @@ function sum(values, rmNull = false) {
   }
 }
 
+/* function for calculating the sample standard deviation */
+function stDev(values, rmNull = false) {
+  if (values.length === 0) throw new Error('empty dataset');
+  if (values.includes(null) && rmNull === false) {
+    return NaN;
+  } else {
+    const valuesF = values.filter(value => value !== null);
+    const xBar = mean(values, rmNull = true);
+    const sumResiduals = valuesF.reduce((pValue, cValue) => {
+      return pValue + (cValue - xBar) * (cValue - xBar);
+    }, 0);
+    const variance = sumResiduals / (valuesF.length - 1);
+    return Math.sqrt(variance);
+  }
+}
+
 module.exports = {
   count,
   minimum,
   maximum,
   mean,
-  sum
+  sum,
+  stDev
 };

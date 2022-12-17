@@ -4,7 +4,8 @@ const {
   minimum, 
   maximum, 
   mean, 
-  sum
+  sum,
+  stDev
 } = require('../source/the-missing-value');
 
 describe('Descriptive statistics functions', () => {
@@ -132,7 +133,7 @@ describe('Descriptive statistics functions', () => {
     });
     it('returns the value 3.01', () => {
       let result = mean(values4);
-      expect(result).to.be.closeTo(3.01, 0.1);
+      expect(result).to.be.closeTo(3.01, 0.000001);
     });
     it('returns NaN with a missing value in the dataset', () => {
       let result = mean(values3);
@@ -165,7 +166,7 @@ describe('Descriptive statistics functions', () => {
     });
     it('returns the value 15.05', () => {
       let result = sum(values4);
-      expect(result).to.be.closeTo(15.05, 0.1);
+      expect(result).to.be.closeTo(15.05, 0.000001);
     });
     it('returns NaN with a missing value in the dataset', () => {
       let result = sum(values3);
@@ -177,4 +178,36 @@ describe('Descriptive statistics functions', () => {
     });
   });
 
+  describe('standard deviation function', () => {
+    it('is a function', () => {
+      expect(stDev).to.be.a('function');
+    });
+    it('throws an error if the dataset contains no values', () => {
+      expect(stDev.bind(stDev, [])).to.throw(Error, 'empty dataset'); 
+    });
+    it('returns a value of type number', () => {
+      let result = stDev(values1);
+      expect(result).to.be.a('number');
+    });
+    it('returns the value 3.316625', () => {
+      let result = stDev(values1);
+      expect(result).to.be.closeTo(3.316625, 0.000001);
+    });
+    it('returns the value 3.316625', () => {
+      let result = stDev(values2);
+      expect(result).to.be.closeTo(3.316625, 0.000001);
+    });
+    it('returns the value 1.581139', () => {
+      let result = stDev(values4);
+      expect(result).to.be.closeTo(1.581139, 0.000001);
+    });
+    it('returns NaN with a missing value in the dataset', () => {
+      let result = stDev(values3);
+      expect(result).to.be.NaN;
+    });
+    it('returns 3.204164 with null values removed', () => {
+      let result = stDev(values3, rmNull = true);
+      expect(result).to.be.closeTo(3.204164, 0.1);
+    });
+  });
 });
