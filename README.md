@@ -2,12 +2,11 @@
 
 ## Project Description
 
-A library for performing data analytics and statistics in either the browser or Node. Currently, the library
-contains functions for calculating descriptive statistics, but will be expanded to include inferential statistics.
+A library for performing descriptive statistics in either the browser or Node. 
 
 ## Installation
 
-Simply clone the repo or download a copy of the-missing-value.js from the source folder.
+npm install the-missing-value
 
 ## Using the Library
 
