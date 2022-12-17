@@ -6,7 +6,7 @@ const {
   mean, 
   sum,
   stDev
-} = require('../source/the-missing-value');
+} = require('../src/the-missing-value');
 
 describe('Descriptive statistics functions', () => {
 
