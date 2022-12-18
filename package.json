@@ -1,8 +1,8 @@
 {
   "name": "the-missing-value",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A descriptive statistics library with optional handling of missing values",
-  "main": "index.js",
+  "main": "./src/the-missing-value.js",
   "scripts": {
     "test": "mocha"
   },
