@@ -2,7 +2,7 @@
 
 ## Project Description
 
-A library for performing descriptive statistics in either the browser or Node. 
+A library for performing descriptive statistics with optional handling of missing values
 
 ## Installation
 
@@ -13,10 +13,6 @@ npm install the-missing-value
 Require the library 
 
 const statistics = require('the-missing-value.js');
-  
-or
-
-const { minimum, maximum } = require('the-missing-value.js');
   
 ## License
 
