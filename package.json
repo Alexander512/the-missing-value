@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [ 'statistics', 'descriptive', 'missing' ],
+  "keywords": [ "statistics", "descriptive", "missing" ],
   "author": "Alexander Stoisolovich",
   "license": "MIT",
   "devDependencies": {
