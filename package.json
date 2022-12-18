@@ -1,12 +1,12 @@
 {
   "name": "the-missing-value",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A descriptive statistics library with optional handling of missing values",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
-  "keywords": [],
+  "keywords": [ "statistics", "descriptive", "missing" ],
   "author": "Alexander Stoisolovich",
   "license": "MIT",
   "devDependencies": {
